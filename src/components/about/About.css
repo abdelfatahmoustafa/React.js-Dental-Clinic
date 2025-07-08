@@ -1,0 +1,188 @@
+.about {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-light);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.about-image {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.rounded-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  transition: transform 0.3s ease;
+}
+
+.rounded-image:hover {
+  transform: scale(1.02);
+}
+
+.about-text h3 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.credentials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.credential-item {
+  text-align: center;
+  padding: var(--spacing-md);
+  background-color: var(--bg-color);
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.credential-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.credential-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.credential-item h4 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.credential-item p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0;
+}
+
+.specialties {
+  background-color: var(--bg-color);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+}
+
+.specialties h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-md);
+}
+
+.specialties ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-sm);
+  list-style: none;
+  padding: 0;
+}
+
+.specialties li {
+  font-size: 1rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+}
+
+.specialties li::before {
+  content: '•';
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+
+  .about-image {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .about-text {
+    text-align: center;
+  }
+
+  .specialties ul {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.75rem;
+  }
+
+  .credentials {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .specialties ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .about-text p {
+    font-size: 1rem;
+  }
+
+  .specialties {
+    padding: var(--spacing-md);
+  }
+}

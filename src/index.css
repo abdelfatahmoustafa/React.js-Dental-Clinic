@@ -1,0 +1,173 @@
+:root {
+  /* Primary Colors */
+  --primary-color: #4BB6C2;  /* Dental blue-green */
+  --primary-rgb: 75, 182, 194;
+  --secondary-color: #8FD4C7; /* Mint green */
+  --secondary-rgb: 143, 212, 199;
+  
+  /* Background Colors */
+  --bg-color: #ffffff;
+  --bg-light: #F5F9FA;
+  --bg-accent: #E8F4F6;
+  
+  /* Text Colors */
+  --text-color: #2D3748;
+  --text-light: #4A5568;
+  --text-muted: #718096;
+  
+  /* Accent Colors */
+  --accent-blue: #63B3ED;
+  --accent-green: #68D391;
+  --accent-yellow: #F6E05E;
+  
+  /* Interactive Colors */
+  --hover-color: #3A919B;
+  --focus-ring: rgba(75, 182, 194, 0.4);
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Gradients */
+  --gradient-start-rgb: var(--primary-rgb);
+  --gradient-end-rgb: 143, 212, 199;
+  
+  /* Border Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-color);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--hover-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+.section {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-color);
+}
+
+.section-alt {
+  background-color: var(--bg-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.card {
+  background: var(--bg-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+  padding: var(--spacing-md);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Utility Classes */
+.text-primary { color: var(--primary-color); }
+.text-secondary { color: var(--secondary-color); }
+.text-light { color: var(--text-light); }
+.text-muted { color: var(--text-muted); }
+.bg-primary { background-color: var(--primary-color); }
+.bg-secondary { background-color: var(--secondary-color); }
+.bg-light { background-color: var(--bg-light); }
+.bg-accent { background-color: var(--bg-accent); }
+.bg-white { background-color: var(--bg-color); }
+
+/* Animation for dental icon */
+.tooth-icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: var(--primary-color);
+  border-radius: var(--radius-md);
+  animation: pulseGlow 2s infinite;
+  filter: drop-shadow(0 4px 6px var(--shadow-color));
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+  50% {
+    transform: scale(1.05);
+    filter: brightness(110%);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(100%);
+  }
+}

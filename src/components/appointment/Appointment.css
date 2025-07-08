@@ -1,0 +1,190 @@
+.appointment {
+  padding: var(--spacing-xl) 0;
+  background-color: var(--bg-color);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-sm);
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.appointment-container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.appointment-info {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+}
+
+.appointment-info h3 {
+  font-size: 1.8rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+}
+
+.benefits-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.benefit-icon {
+  font-size: 2rem;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+.benefits-list h4 {
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-xs);
+}
+
+.benefits-list p {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+.appointment-form {
+  padding: var(--spacing-lg);
+  background-color: var(--bg-light);
+  border-radius: var(--radius-lg);
+}
+
+.form-group {
+  margin-bottom: var(--spacing-md);
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background-color: var(--bg-color);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-md);
+}
+
+.input-icon {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border: none;
+  background: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  outline: none;
+}
+
+select {
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  background-color: var(--bg-color);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-md);
+}
+
+.date-picker {
+  width: 100%;
+  cursor: pointer;
+}
+
+.submit-button {
+  width: 100%;
+  padding: var(--spacing-md);
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-2px);
+}
+
+/* React DatePicker Custom Styles */
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.react-datepicker__input-container {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .appointment-container {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .appointment-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .benefits-list h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .appointment-info,
+  .appointment-form {
+    padding: var(--spacing-md);
+  }
+
+  .form-group label {
+    padding: var(--spacing-xs);
+  }
+
+  .submit-button {
+    padding: var(--spacing-sm);
+    font-size: 1rem;
+  }
+} 
